@@ -1,43 +1,63 @@
 package in.nadeem.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
-
+@Table(name = "emp")
 public class EmployeeEntity {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	private String name;
-	private String dept;
+	@Column(name = "empno")
+	private Integer empNumber;
 
-	public long getId() {
-		return id;
+	@Column(name = "ename")
+	private String empName;
+
+	@Column(name = "sal")
+	private Double salary;
+
+	@Column(name = "deptno")
+	private Integer deptNumber;
+
+	public Integer getEmpNumber() {
+		return empNumber;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setEmpNumber(Integer empNumber) {
+		this.empNumber = empNumber;
 	}
 
-	public String getName() {
-		return name;
+	public String getEmpName() {
+		return empName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setEmpName(String empName) {
+		this.empName = empName;
 	}
 
-	public String getDept() {
-		return dept;
+	public Double getSalary() {
+		return salary;
 	}
 
-	public void setDept(String dept) {
-		this.dept = dept;
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	public Integer getDeptNumber() {
+		return deptNumber;
+	}
+
+	public void setDeptNumber(Integer deptNumber) {
+		this.deptNumber = deptNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "EmployeeEntity [empNumber=" + empNumber + ", empName=" + empName + ", salary=" + salary
+				+ ", deptNumber=" + deptNumber + "]";
 	}
 
 }
