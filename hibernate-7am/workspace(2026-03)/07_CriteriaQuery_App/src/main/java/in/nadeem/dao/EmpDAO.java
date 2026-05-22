@@ -6,7 +6,5 @@ import in.nadeem.entity.EmployeeEntity;
 
 public interface EmpDAO {
 
-	List<EmployeeEntity> executeNamedQuery(int deptNo);
-
-	List executeNamedNativeQuery(int sal);
+	List<EmployeeEntity> executeCriteriaQuery();
 }
