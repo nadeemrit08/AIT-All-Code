@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<ehcache>
+    <defaultCache
+            maxEntriesLocalHeap="100"
+            eternal="false"
+            timeToIdleSeconds="50"
+            timeToLiveSeconds="120"/>
+            
+      <cache name = "com.nadeem.entity.EmployeeEntity"
+			maxEntriesLocalHeap = "10"
+			eternal = "false"
+			timeToIdleSeconds = "20"
+			timeToLiveSeconds = "60">
+	  </cache>
+</ehcache>
